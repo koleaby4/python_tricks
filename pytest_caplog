@@ -1,0 +1,5 @@
+# https://docs.pytest.org/en/7.1.x/how-to/logging.html#caplog-fixture
+
+def test_error_is_logged(caplog):
+    function_under_test()
+    assert "Expected error message" in caplog.records[1].message
